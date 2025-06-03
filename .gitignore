@@ -1,0 +1,54 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio
+.vs/
+*.vc.db
+*.vscode/
+
+# Rider
+.idea/
+
+# Dependency packages
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Logs
+*.log
+
+# Configuracoes locais e secrets
+appsettings.Development.json
+secrets.json
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Backup e arquivos temporários
+*.bak
+*.tmp
+*.swp
+
+# Publish output
+publish/

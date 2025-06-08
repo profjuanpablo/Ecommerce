@@ -24,10 +24,12 @@ namespace ECommerce.Controllers
         [HttpPost]
         public IActionResult Create(Category  obj)
         {
-            if (obj.Name == "")
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
-                ModelState.AddModelError("name", "Não pode ser vazio.");
+                ModelState.AddModelError("name", "Não podem ser iguais.");
             }
+
+           
             if (ModelState.IsValid) {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();

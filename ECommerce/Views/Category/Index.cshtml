@@ -8,27 +8,38 @@
         </div>
         <div class="col-6 text-end">
             <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
-               <i class="bi bi-plus-circle"></i> Create New Category
+                <i class="bi bi-plus-circle"></i> Create New Category
             </a>
         </div>
     </div>
-<table class="table table-bordered table-striped">
-    <thead>
+    <table class="table table-bordered table-striped">
+        <thead>
         <th>Category Name</th>
         <th>Display Order</th>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.OrderBy(u=>u.DisplayOrder))
-        {
-            <tr>
-                <td>@item.Name</td>
-                <td>@item.DisplayOrder</td>
-            </tr>
-        }
-       
-    </tbody>
+        <th>Actions</th>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.OrderBy(u => u.DisplayOrder))
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.DisplayOrder</td>
+                    <td>
+                            <a asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id"  class="btn btn-primary mx-2">
+                                <i class="bi bi-pencil-square"></i>Edit
+                            </a>
 
-</table>
+                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mx-2">
+                                <i class="bi bi-trash-fill"></i>Delete
+                            </a>
+                        
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
 
 </div>
 

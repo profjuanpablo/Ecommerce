@@ -1,5 +1,9 @@
 ﻿@model List<Category>
+@if (TempData["success"] != null)
+{
+    <h2>@TempData["success"]</h2>
 
+}
 
 <div class="container">
     <div class="row pt-4">
@@ -14,9 +18,11 @@
     </div>
     <table class="table table-bordered table-striped">
         <thead>
+            <tr>
         <th>Category Name</th>
         <th>Display Order</th>
         <th>Actions</th>
+        </track>
         </thead>
         <tbody>
             @foreach (var item in Model.OrderBy(u => u.DisplayOrder))

@@ -9,7 +9,7 @@ namespace ECommerce.Models
         public int Id { get; set; }
         [Required]
         [MaxLength(30)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required]
         [DisplayName("Display Order")]
